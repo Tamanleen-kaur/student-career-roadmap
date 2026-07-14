@@ -1,0 +1,71 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>student career roadmap</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <!--NAVBAR-->
+    <nav>
+        <h2>CAREER ROADMAP</h2>
+        <ul>
+            <li><a href="{% url 'home'%}">HOME</a></li>
+           <li><a href="{% url 'dashboard'%}">DASHBOARD</a></li>
+            <li><a href="{% url 'career_list'%}">CAREERS</a></li>
+            <li><a href="{% url 'resources'%}">RESOURCES</a></li>
+            <li><a href="{% url 'quiz'%}">QUIZ</a></li>
+            <li><a href="{% url 'profile'%}">PROFILE</a></li>
+            <li><a href="{% url 'contact'%}">CONTACT</a></li>
+        </ul>
+    </nav>
+    <section class="resources">
+
+    <h1>Learning Resources</h1>
+
+    <p>Explore these resources to improve your skills and prepare for internships and placements.</p>
+
+    <div class="resource-card">
+        <h2>Programming Practice</h2>
+        <p>Practice coding problems on platforms like LeetCode, HackerRank, CodeChef, and GeeksforGeeks.</p>
+        <a href="https://leetcode.com" target="_blank">Visit Resource</a>
+    </div>
+
+    <div class="resource-card">
+        <h2>Data Structures & Algorithms</h2>
+        <p>Strengthen your DSA concepts using GeeksforGeeks, NeetCode, and Coding Ninjas.</p>
+        <a href="https://www.geeksforgeeks.org" target="_blank">Visit Resource</a>
+    </div>
+
+    
+    
+
+    <div class="resource-card">
+        <h2>Aptitude Preparation</h2>
+        <p>Prepare Quantitative Aptitude, Logical Reasoning, and Verbal Ability for placements.</p>
+        <a href="https://www.indiabix.com" target="_blank">Visit Resource</a>
+    </div>
+
+    <div class="resource-card">
+        <h2>Interview Preparation</h2>
+        <p>Practice technical interview questions, HR questions, and mock interviews.</p>
+        <a href="https://www.interviewbit.com" target="_blank">Visit Resource</a>
+    </div>
+
+    <div class="resource-card">
+        <h2>Resume & LinkedIn</h2>
+        <p>Create a professional resume and improve your LinkedIn profile for better opportunities.</p>
+        <a href="https://www.canva.com/resumes/" target="_blank">Visit Resource</a>
+    </div>
+
+</section>
+
+
+    <!--FOOTER-->
+    <footer>
+        <p>© 2026 Student Carrer Roadmap.All Rights Reserved. </p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Career Roadmap</title>
+   <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+
+    <div class="welcome-container">
+
+        <h3>Welcome To</h3>
+
+        <h1>Student Career Roadmap</h1>
+
+        <p>
+            Discover your ideal career, learn the right skills,
+            follow a clear roadmap, and build a successful future.
+        </p>
+
+        <a href="{% url 'home' %}"><button id="startBtn">Get Started</button></a>
+
+    </div>
+     
+  
+
+</body>
+</html>

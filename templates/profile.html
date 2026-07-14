@@ -1,0 +1,53 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+       <nav>
+        <h2>CAREER ROADMAP</h2>
+        <ul>
+<li><a href="{% url 'home'%}">HOME</a></li>
+           <li><a href="{% url 'dashboard'%}">ABOUT</a></li>
+            <li><a href="{% url 'career_list'%}">CAREERS</a></li>
+            <li><a href="{% url 'resources'%}">RESOURCES</a></li>
+            <li><a href="{% url 'quiz'%}">QUIZ</a></li>
+            <li><a href="{% url 'profile'%}">PROFILE</a></li>
+            <li><a href="{% url 'contact'%}">CONTACT</a></li>
+        </ul>
+    </nav>
+    <hr class="line">
+<section class="Profilesection">
+
+    <div class="profile-card">
+
+        <h1>YOUR PROFILE</h1>
+
+       
+
+        <p><strong>👤USERNAME :</strong> {{ user.username }}</p>
+
+        <p><strong>📩EMAIL :</strong> {{ user.email }}</p>
+
+       
+
+        
+
+    </div>
+<br>
+<br><br>
+{% csrf_token%}
+    <a href="{% url 'logout'%}" class="logout-btn">Logout</a>
+
+</section>
+<footer>
+        <p>© 2026 Student Carrer Roadmap.All Rights Reserved. </p>
+    </footer>
+</body>
+</html>

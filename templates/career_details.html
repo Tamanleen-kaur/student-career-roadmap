@@ -1,0 +1,84 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>student career roadmap</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <!--NAVBAR-->
+    <nav>
+        <h2>CAREER ROADMAP</h2>
+        <ul>
+            <li><a href="{% url 'home'%}">HOME</a></li>
+           <li><a href="{% url 'dashboard'%}">DASHBOARD</a></li>
+            <li><a href="{% url 'career_list'%}">CAREERS</a></li>
+            <li><a href="{% url 'resources'%}">RESOURCES</a></li>
+            <li><a href="{% url 'quiz'%}">QUIZ</a></li>
+            <li><a href="{% url 'profile'%}">PROFILE</a></li>
+            <li><a href="{% url 'contact'%}">CONTACT</a></li>
+        </ul>
+    </nav>
+    <section class="careerdetailssection">
+
+    <h1>Career Details</h1>
+    <p>Explore detailed information about your selected career.</p>
+
+    <div class="careerinfo">
+        <h2>Career Name</h2>
+        <p>{{career.title}}</p>
+    </div>
+
+    <div class="careerinfo">
+        <h2>Career Overview</h2>
+        <p>{{career.description}}</p>
+    </div>
+
+    <div class="careerinfo">
+        <h2>Skills Required</h2>
+        
+            <p>{{career.skills}}</p>
+           
+        
+    </div>
+
+    <div class="careerinfo">
+        <h2>Learning Roadmap</h2>
+        <p>Follow a step-by-step roadmap to become job-ready.</p>
+        <a href="{% url 'roadmap' career.id %}">View Roadmap</a>
+    </div>
+
+    <div class="careerinfo" >
+        <h2>Learning Resources</h2>
+        <p>Access free courses, tutorials, and documentation.</p>
+        <a href="{% url 'resources'%}">View Resources</a>
+    </div>
+
+    <div class="careerinfo">
+        <h2>Career Quiz</h2>
+        <p>Check whether this career matches your interests and skills.</p>
+        <a href="{% url 'quiz'%}">Take Quiz</a>
+    </div>
+
+    <div class="careerinfo">
+        <h2>Career Opportunities</h2>
+        <p>{{career.opportunities|linebreaks}}</p>
+        
+    </div>
+
+    <div class="careerinfo">
+        <h2>Salary & Career Growth</h2>
+        <p>{{career.salary|safe}}</p>
+    </div>
+
+</section>
+
+</footer>
+    <!--FOOTER-->
+    <footer>
+        <p>© 2026 Student Carrer Roadmap.All Rights Reserved. </p>
+    </footer>
+</body>
+</html>

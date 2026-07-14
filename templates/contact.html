@@ -1,0 +1,58 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>student career roadmap</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <!--NAVBAR-->
+    <nav>
+        <h2>CAREER ROADMAP</h2>
+        <ul>
+            <li><a href="{% url 'home'%}">HOME</a></li>
+           <li><a href="{% url 'dashboard'%}">DASHBOARD</a></li>
+            <li><a href="{% url 'career_list'%}">CAREERS</a></li>
+            <li><a href="{% url 'resources'%}">RESOURCES</a></li>
+            <li><a href="{% url 'quiz'%}">QUIZ</a></li>
+            <li><a href="{% url 'profile'%}">PROFILE</a></li>
+            <li><a href="{% url 'contact'%}">CONTACT</a></li>
+        </ul>
+    </nav>
+    <!--CONTACT SECTION-->
+    <section class="contactsection">
+        <h1>CONTACT US</h1>
+        <p>If you have any questions and suggestions,feel free to contact us.</p>
+       
+        <form method="POST">
+            {%csrf_token%}
+            <label>FULL NAME</label><br>
+            <input type="text" name="name" placeholder="ENTER YOUR NAME"><BR><BR>
+             <label>EMAIL</label><br>
+            <input type="email" name="email" placeholder="ENTER YOU EMAIL"><BR><BR>
+             <label>SUBJECT</label><br>
+            <input type="text" name="subject" placeholder="ENTER SUBJECT"><BR><BR>
+             <label>MESSAGE</label><br>
+            <textarea rows="5" cols="40" name="message" placeholder="Write Your Message....."></textarea><br><br>
+            <button type="submit">SEND MESSAGE</button>
+          </form><BR>
+             {% if messages%}
+        {% for message in messages%}
+        <p style="color:rgb(20, 213, 20);font-weight: bold;">
+            {{message}}
+        </p>
+        {% endfor %}
+        {% endif %}
+            <h3>CONTACT INFORMATION</h3><BR>
+            <p><strong>EMAIL : </strong>Support@studentcareerroadmap.com</p>
+            <p><strong>PHONE : </strong>+91 9887400000</p>
+            <p><strong>ADDRESS : </strong>Punjab,India</p><!--indicates important text and make bold-->
+    </section>
+     <!--FOOTER-->
+     
+    <footer>
+        <p>© 2026 Student Carrer Roadmap.All Rights Reserved. </p>
+    </footer>
+</body>

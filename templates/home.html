@@ -1,0 +1,81 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>student career roadmap</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <!--NAVBAR-->
+    <nav>
+        <h2>CAREER ROADMAP</h2>
+        <ul>
+           <li><a href="{% url 'home'%}">HOME</a></li>
+           <li><a href="{% url 'about'%}">ABOUT</a></li>
+            <li><a href="{% url 'career_list'%}">CAREERS</a></li>
+            <li><a href="{% url 'contact'%}">CONTACT</a></li>
+            <li><a href="{% url 'login'%}">LOGIN</a></li>
+            <li><a href="{% url 'register'%}">REGISTER</a></li>
+        </ul>
+    </nav>
+    <hr class="line">
+    <!--HERO SECTION-->
+    <section class="heroheading">
+        <h1>PLAN YOUR CAREER WITH CONFIDENCE</h1>
+        <p>Explore career paths,learn required skills and achieve your dream job</p>
+        <a href="{% url 'career_list'%}"><button class="explorebtn">EXPLORE CARRER</button></a>
+    </section>
+    <!--POPULAR CAREERS-->
+    <section class="homesection">
+           <H2>POPULAR CAREERS</H2>
+           <div class="careercard">
+            <h3>FULL STACK DEVELOPER</h3>
+            <p>Build websites using HTML,CSS,Javascript,Djano,and MySQL</p>
+           </div>
+           <div class="careercard">
+            <h3>DATA ANALYST</h3>
+            <p>Analyse data using Excel,SQL,Python, and Power BI</p>
+           </div>
+           <div class="careercard">
+            <h3>AI(Artifical Intelligence) Engineer</h3>
+            <p>Work with python,machine learning and artifical intelligence</p>
+           </div>
+           <div class="careercard">
+            <h3>CYBER SECURITY</h3>
+            <p>Protect systems and networks from cyber attacks</p>
+           </div>
+    </section>
+    <!--WHY CHOOSE US?-->
+    <section class="features">
+        <h2>WHY CHOOSE US?</h2>
+        <div class="feature">
+            <h3>CAREER ROADMAPS</h3>
+            <p>Step-by-step learning path</p>
+        </div>
+        <div class="feature">
+            <h3>LEARNING RESOURCES</h3>
+            <p>Best free study materials</p>
+        </div>
+        <div class="feature">
+            <h3>SKILL QUIZS</h3>
+            <p>Answer the questions to discover a career that matches your interests.</p>
+        </div>
+        <div class="feature">
+            <h3>PROGRESS TRACKING</h3>
+            <p>Track your learning journey</p>
+        </div>
+    </section>
+    <!--CALL TO ACTION-->
+    <section class="cta">
+        <h2>START YOUR CAREER JOURNEY TODAY</h2>
+        <a href="{% url 'register' %}"><button>REGISTER NOW!</button></a>
+    </section>
+    <!--FOOTER-->
+    <footer>
+        <p>© 2026 Student Carrer Roadmap.All Rights Reserved. </p>
+    </footer>
+   
+</body>
+</html>

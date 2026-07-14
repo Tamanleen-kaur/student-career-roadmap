@@ -1,0 +1,142 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>student career roadmap</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <!--NAVBAR-->
+    <nav>
+        <h2>CAREER ROADMAP</h2>
+        <ul>
+           <li><a href="{% url 'home'%}">HOME</a></li>
+           <li><a href="{% url 'dashboard'%}">DASHBOARD</a></li>
+            <li><a href="{% url 'career_list'%}">CAREERS</a></li>
+            <li><a href="{% url 'resources'%}">RESOURCES</a></li>
+            <li><a href="{% url 'quiz'%}">QUIZ</a></li>
+            <li><a href="{% url 'profile'%}">PROFILE</a></li>
+            <li><a href="{% url 'contact'%}">CONTACT</a></li>
+        </ul>
+    </nav>
+    <hr class="line">
+    <section class="quizsection">
+
+    <h1>Career Quiz</h1>
+    <p>Answer the following questions to discover a career that matches your interests.</p>
+
+    <form method>
+
+        <div class="quiz-cards">
+            <h2>1. Which activity do you enjoy the most?</h2>
+
+            <input type="radio" name="q1"  value="full stack">
+            <label for="coding">Coding and Building Websites</label><br>
+
+            <input type="radio" name="q1" value="data science">
+            <label for="data">Working with Data</label><br>
+
+            <input type="radio" name="q1" value="UI/UX">
+            <label for="design">Designing User Interfaces</label><br>
+
+            <input type="radio" name="q1" value="cyber security">
+            <label for="security">Protecting Computer Systems</label>
+        </div>
+
+        <br>
+
+        <div class="quiz-cards">
+            <h2>2. Which subject do you like the most?</h2>
+
+            <input type="radio" name="q2" value="full stack">
+            <label for="python">Programming</label><br>
+
+            <input type="radio" name="q2" value="datascience">
+            <label for="math">Mathematics</label><br>
+
+            <input type="radio" name="q2" value="UI/UX">
+            <label for="creative">Art & Design</label><br>
+
+            <input type="radio" name="q2" value="cyber security">
+            <label for="network">Computer Networks</label>
+        </div>
+
+        <br>
+
+        <div class="quiz-cards">
+            <h2>3. What type of work do you prefer?</h2>
+
+            <input type="radio" name="q3" value="full stack">
+            <label for="web">Developing Websites</label><br>
+
+            <input type="radio" name="q3" value="datascience">
+            <label for="analysis">Analyzing Information</label><br>
+
+            <input type="radio" name="q3" value="UI/UX">
+            <label for="ui">Creating Designs</label><br>
+
+            <input type="radio" name="q3" value="cybersecurity">
+            <label for="protect">Securing Systems</label>
+        </div><br>
+        
+
+<div class="quiz-cards">
+    <h2>4. Which type of work would you enjoy the most?</h2>
+
+    <label><input type="radio" name="q4" value="fullstack"> Building websites and apps</label><br>
+    <label><input type="radio" name="q4" value="datascience"> Analyzing data and finding patterns</label><br>
+    <label><input type="radio" name="q4" value="cybersecurity"> Protecting computers from hackers</label><br>
+    <label><input type="radio" name="q4" value="UI/UX"> Designing creative graphics</label>
+</div><br>
+
+<div class="quiz-cards">
+    <h2>5. Which skill would you like to learn in the future?</h2>
+
+    <label><input type="radio" name="q5" value="full stack"> Programming</label><br>
+    <label><input type="radio" name="q5" value="datascience"> Data Analysis</label><br>
+    <label><input type="radio" name="q5" value="cybersecurity"> Ethical Hacking</label><br>
+    <label><input type="radio" name="q5" value="UI/UX"> UI/UX Designing</label>
+</div><br>
+
+<div class="quiz-cards">
+    <h2>6. What motivates you the most?</h2>
+
+    <label><input type="radio" name="q6" value="full stack"> Solving technical problems</label><br>
+    <label><input type="radio" name="q6" value="datascience"> Working with numbers and reports</label><br>
+    <label><input type="radio" name="q6" value="cybersecurity"> Keeping people and systems safe</label><br>
+    <label><input type="radio" name="q6" value="UI/UX"> Creating beautiful designs</label>
+</div><br>
+
+<div class="quiz-cards">
+    <h2>7. Which project would you be most excited to build?</h2>
+
+    <label><input type="radio" name="q7" value="full stack"> A website or mobile app</label><br>
+    <label><input type="radio" name="q7" value="datascience"> A data dashboard</label><br>
+    <label><input type="radio" name="q7" value="cybersecurity"> A secure computer network</label><br>
+    <label><input type="radio" name="q7" value="UI/UX"> A logo or website design</label>
+</div>
+
+        <br><br>
+
+        <button type="button" id="submit">Submit Quiz</button>
+
+    </form>
+<br><br>
+    <div id="quiz-card-result">
+        <h2>Quiz Result</h2><br><br>
+        <p>Your recommended career will appear here after submitting the quiz.</p>
+    </div>
+
+</section>
+
+
+<script src="{% static 'js/script.js'%}"></script>
+    <!--FOOTER-->
+    <footer>
+        <p>© 2026 Student Carrer Roadmap.All Rights Reserved. </p>
+    </footer>
+    
+</body>
+</html>

@@ -1,0 +1,51 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>student career roadmap</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <!--NAVBAR-->
+    <nav>
+        <h2>CAREER ROADMAP</h2>
+        <ul>
+            <li><a href="{% url 'home'%}">HOME</a></li>
+           <li><a href="{% url 'about'%}">ABOUT</a></li>
+            <li><a href="{% url 'career_list'%}">CAREERS</a></li>
+            <li><a href="{% url 'contact'%}">CONTACT</a></li>
+            <li><a href="{% url 'login'%}">LOGIN</a></li>
+            <li><a href="{% url 'register'%}">REGISTER</a></li>
+        </ul>
+    </nav>
+    <!--ABOUT SECTION-->
+    <section class="aboutsection">
+        <h1>ABOUT STUDENT CAREER ROADMAP</h1>
+        <P>Student Career Roadmap is a platform designed to help students explore different careers options and understand the skills needed for each career.It provides simple roadmaps,learning resources,quizs and progress tracking to make career planning easier</P>
+        <h2>OUR MISSION</h2>
+        <P>Our mission is to guide students in choosing the right career and provide a clear learning path to achieve their goals</P>
+        <h2>WHAT WE OFFER</h2>
+        <ul>
+            <li>Career Guidance</li>
+            <li>Step-By-Step Roadmaps</li>
+            <li>Learning Resources</li>
+            <li>Skill Quizzes</li>
+            <li>Progress Tracking</li>
+        </ul>
+        <h2>WHY CHOOSE US?</h2>
+        <ul>
+            <li>Simple and Easy to use</li>
+             <li>Career-Focused Learning</li>
+              <li>Beginner-Friendly Guidance</li>
+               <li>Free Learning Resources</li>
+        </ul>
+    </section>
+    <!--FOOTER-->
+    <footer>
+        <p>© 2026 Student Carrer Roadmap.All Rights Reserved. </p>
+    </footer>
+    
+</body>
+</html>

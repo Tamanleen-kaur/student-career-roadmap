@@ -1,0 +1,63 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>student career roadmap</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <!--NAVBAR-->
+    <nav>
+        <h2>CAREER ROADMAP</h2>
+        <ul>
+           <li><a href="{% url 'home'%}">HOME</a></li>
+           <li><a href="{% url 'dashboard'%}">DASHBOARD</a></li>
+            <li><a href="{% url 'career_list'%}">CAREERS</a></li>
+            <li><a href="{% url 'resources'%}">RESOURCES</a></li>
+            <li><a href="{% url 'quiz'%}">QUIZ</a></li>
+            <li><a href="{% url 'profile'%}">PROFILE</a></li>
+            <li><a href="{% url 'contact'%}">CONTACT</a></li>
+            
+        </ul>
+    </nav>
+    <section class="dashboardsection">
+
+    <h1>Student Dashboard</h1>
+    <p>Welcome {{user.username}}!</p>
+
+    <div class="dashboard-card">
+        <h2>Welcome</h2>
+        <p>Hello {{user.username}}, Continue your career preparation.</p>
+    </div>
+
+   
+
+    <div class="dashboard-card">
+        <h2>Explore Careers</h2>
+        <p>View different career options and their learning roadmaps.</p>
+        <a href="{% url 'career_list' %}">View Careers</a>
+    </div>
+
+    <div class="dashboard-card">
+        <h2>Career Quiz</h2>
+        <p>Find the career that best matches your interests.</p>
+        <a href="{% url 'quiz' %}">Start Quiz</a>
+    </div>
+
+
+
+    <div class="dashboard-card">
+        <h2>Your Profile</h2>
+        <p>View and update your profile information.</p>
+        <a href="{% url 'profile' %}">Go to Profile</a>
+    </div>
+
+</section>
+    <!--FOOTER-->
+    <footer>
+        <p>© 2026 Student Carrer Roadmap.All Rights Reserved. </p>
+    </footer>
+</body>
+</html>

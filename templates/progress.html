@@ -1,0 +1,37 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Progress</title>
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+
+<section class="Progresssection">
+
+    <div class="progress-card">
+
+        <h2>YOUR PROGRESS</h2>
+
+        <p><strong>Quiz Status:</strong> Not Attempted</p>
+
+        <p><strong>Quiz Score:</strong> 0/10</p>
+
+        <p><strong>Selected Career:</strong> Not Selected</p>
+
+        <p><strong>Roadmap Progress:</strong> 0%</p>
+
+    </div>
+
+    <a href="{% url 'dashboard' %}" class="dashboard-link">
+        ← Back to Dashboard
+    </a>
+
+</section>
+
+</body>
+</html>

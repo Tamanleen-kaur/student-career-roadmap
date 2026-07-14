@@ -1,0 +1,53 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>student career roadmap</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <!--NAVBAR-->
+    <nav>
+        <h2>CAREER ROADMAP</h2>
+        <ul>
+            <li><a href="{% url 'home'%}">HOME</a></li>
+           <li><a href="{% url 'about'%}">ABOUT</a></li>
+            <li><a href="{% url 'career_list'%}">CAREERS</a></li>
+            <li><a href="{% url 'contact'%}">CONTACT</a></li>
+            <li><a href="{% url 'login'%}">LOGIN</a></li>
+            <li><a href="{% url 'register'%}">REGISTER</a></li>
+        </ul>
+    </nav>
+    <!--REGISTER SECTION-->
+    <section class="registersection">
+        <h1>REGISTER</h1>
+        <p>Create  your account to start your journey.</p>
+        <form method="POST">
+            {%csrf_token%}
+            <label for="name" >USERNAME</label><BR>
+            <input type="text" name="username" placeholder="ENTER YOUR USERNAME" required><br><br>
+            <label for="email">EMAIL</label><BR>
+            <input type="email" name="email" placeholder="ENTER YOUR EMAIL" required><br><br>
+            <label for="password">PASSWORD</label><BR>
+            <input type="password" name="password" placeholder="CREATE A PASSWORD" required><br><br>
+            <label for="confirm-password">CONFIRM PASSWORD</label><BR>
+            <input type="password" name="confirm_password" placeholder="CONFIRM YOUR PASSWORD" required><br><br>
+            <button type="submit">REGISTER</button>
+        </form><br>
+        {% if messages %}
+    {% for message in messages %}
+        <p>{{ message }}</p>
+    {% endfor %}
+{% endif %}
+        <p>
+            Already have an account?
+            <a href="{% url 'login'%}">LOGIN HERE</a>
+        </p>
+    </section>
+     <!--FOOTER-->
+    <footer>
+        <p>© 2026 Student Carrer Roadmap.All Rights Reserved. </p>
+    </footer>
+</body>

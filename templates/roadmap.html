@@ -1,0 +1,47 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>student career roadmap</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <!--NAVBAR-->
+    <nav>
+        <h2>CAREER ROADMAP</h2>
+        <ul>
+            <li><a href="{% url 'home'%}">HOME</a></li>
+           <li><a href="{% url 'about'%}">ABOUT</a></li>
+            <li><a href="{% url 'career_list'%}">CAREERS</a></li>
+            <li><a href="{% url 'contact'%}">CONTACT</a></li>
+            <li><a href="{% url 'login'%}">LOGIN</a></li>
+            <li><a href="{% url 'register'%}">REGISTER</a></li>
+        </ul>
+    </nav>
+    <hr class="line">
+    <section class="roadmapsection">
+
+    
+
+<h1>{{ career.title }}</h1>
+<p>Follow this step-by-step roadmap to become a skilled software professional.</p>
+
+{% for step in roadmap_steps %}
+<div>
+    <h2>Step {{ step.step_number }}: {{ step.title }}</h2>
+    <p>{{ step.description }}</p>
+</div>
+{% endfor %}
+
+</section>
+
+
+
+
+    <!--FOOTER-->
+    <footer>
+        <p>© 2026 Student Carrer Roadmap.All Rights Reserved. </p>
+    </footer>
+</body>
