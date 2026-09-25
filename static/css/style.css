@@ -98,10 +98,10 @@ nav{
     padding:15px 50px;
 }
 
-nav h2{
-    font-size:28px;
-    font-weight: 800;
-    color: #c7a30f;
+nav h3{
+    font-size:18px;
+    font-weight:500;
+    color:#c7a30f;
 }
 
 nav ul{
@@ -123,7 +123,7 @@ nav ul li a{
 
 nav ul li a:hover{
     color:#f1c40f;
-    text-decoration: underline;
+    
 }
 .line{
     background-color: white;
@@ -531,7 +531,7 @@ footer{
 .loginsection p{
     text-align:center;
     font-size:17px;
-    color:WHITE;
+    color:white;
     margin-bottom:25px;
     font-weight: 750;
 }
@@ -622,7 +622,7 @@ footer{
 .registersection p{
     text-align:center;
     font-size:17px;
-    color:WHITE;
+    color:white;
     margin-bottom:25px;
     font-weight: 750;
 }
@@ -819,6 +819,7 @@ section{
     color:white;
     line-height:1.8;
     font-weight: 750;
+    
 }
 
 .careerinfo ul{
@@ -840,8 +841,6 @@ section{
     color:black;
     padding:10px 20px;
     border-radius:8px;
-    transition:0.3s;
-  
 }
 
 .careerinfo a:hover{

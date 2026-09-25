@@ -12,13 +12,7 @@
     <nav>
         <h2>CAREER ROADMAP</h2>
         <ul>
-            <li><a href="{% url 'home'%}">HOME</a></li>
-           <li><a href="{% url 'dashboard'%}">DASHBOARD</a></li>
-            <li><a href="{% url 'career_list'%}">CAREERS</a></li>
-            <li><a href="{% url 'resources'%}">RESOURCES</a></li>
-            <li><a href="{% url 'quiz'%}">QUIZ</a></li>
-            <li><a href="{% url 'profile'%}">PROFILE</a></li>
-            <li><a href="{% url 'contact'%}">CONTACT</a></li>
+            
         </ul>
     </nav>
     <section class="careerdetailssection">
@@ -56,11 +50,7 @@
         <a href="{% url 'resources'%}">View Resources</a>
     </div>
 
-    <div class="careerinfo">
-        <h2>Career Quiz</h2>
-        <p>Check whether this career matches your interests and skills.</p>
-        <a href="{% url 'quiz'%}">Take Quiz</a>
-    </div>
+    
 
     <div class="careerinfo">
         <h2>Career Opportunities</h2>
@@ -69,7 +59,7 @@
     </div>
 
     <div class="careerinfo">
-        <h2>Salary & Career Growth</h2>
+        <h2>Salary </h2>
         <p>{{career.salary|safe}}</p>
     </div>
 
